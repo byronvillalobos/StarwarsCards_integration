@@ -4,10 +4,11 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
-import { People } from "./views/people";
-import { Planets } from "./views/planets";
+import { People } from "./component/people";
+import { Planets } from "./component/planets";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import { Cards } from "./views/cards";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -38,6 +39,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/cards">
+							<Cards />
 						</Route>
 						<Route path="*">
 							<h1>404 Not found!</h1>
