@@ -2,27 +2,34 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Card } from "../component/card";
 
-export const People = () => {
-    const { store, actions } = useContext(Context);
+export const Card = () => {
+	const { store, actions } = useContext(Context);
 
-    return (
-        <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            {store.people.map((item, i) => {
-                return <Card
-                    key={index}
-                    nombre={item.name}
-                    var1={"Height: " + item.height}
-                    var2={"Eye color: " + item.eye_color}
-                    var3={"Hair color: " + item.hair_color}
+	return (
+		<div className="row mt-4">
+			<div className="col-4 mx-2">
+				<div className="card">
+					<img src="" className="card-img-top" alt="..." />
+					<div className="card-body">
+						<h5 className="card-title">Card title</h5>
+						<p className="card-text">
+							{PropTypes.var1}
+							<br />
+							{PropTypes.var2}
+							<br />
+							{PropTypes.var3}
+						</p>
 
-                />
-
-        </div>
-
-    );
+						<a href="#" className="btn btn-primary">
+							Learn more!
+						</a>
+						<i className="far fa-heart" />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 // export const People = props => {
