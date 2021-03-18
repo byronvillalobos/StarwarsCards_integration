@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Planets = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="row mt-4">
 			<div className="col-4 mx-2">
@@ -15,12 +17,12 @@ export const Planets = () => {
 					/>
 					<div className="card-body">
 						<h5 className="card-title">Card title</h5>
-						<p className="card-text">
-							Some quick example text to build on the card title and make up the bulk of the cards
-							content.
-						</p>
-						<a href="#" className="btn btn-primary">
-							Learn more!
+						<p className="card-text"> </p>
+						{store.planets.map((item, i) => {
+							return <li key={i}>{item.name}</li>;
+						})}
+						<a href="/" className="btn btn-primary">
+							Back to Home
 						</a>
 						<i className="far fa-heart" />
 					</div>
