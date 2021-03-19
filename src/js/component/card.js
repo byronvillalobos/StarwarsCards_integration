@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Card = () => {
+export const Card = props => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -12,13 +12,13 @@ export const Card = () => {
 				<div className="card">
 					<img src="" className="card-img-top" alt="..." />
 					<div className="card-body">
-						<h5 className="card-title">Card title</h5>
+						<h5 className="card-title">{props.var1}</h5>
 						<p className="card-text">
-							{PropTypes.var1}
+							{props.var2}
 							<br />
-							{PropTypes.var2}
+							{props.var3}
 							<br />
-							{PropTypes.var3}
+							{props.var4}
 						</p>
 
 						<a href="#" className="btn btn-primary">
@@ -30,6 +30,15 @@ export const Card = () => {
 			</div>
 		</div>
 	);
+};
+
+Card.propTypes = {
+	// You can declare that a prop is a specific JS primitive. By default, these
+	// are all optional.
+	var1: PropTypes.string,
+	var2: PropTypes.string,
+	var3: PropTypes.string,
+	var4: PropTypes.string
 };
 
 // export const People = props => {

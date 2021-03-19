@@ -2,29 +2,29 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { Card } from "../component/card";
 
 export const Planets = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="row mt-4">
-			<div className="col-4 mx-2">
+		<div className="row">
+			<div className="col-sm-6">
 				<div className="card">
-					<img
-						src="https://lumiere-a.akamaihd.net/v1/images/magistrate-morgan-elsbeth-main_d7b9d192.jpeg?region=262%2C1%2C951%2C536&width=768"
-						className="card-img-top"
-						alt="..."
-					/>
 					<div className="card-body">
 						<h5 className="card-title">Card title</h5>
-						<p className="card-text"> </p>
+						<p className="card-text" />{" "}
 						{store.planets.map((item, i) => {
-							return <li key={i}>{item.name}</li>;
-						})}
-						<a href="/" className="btn btn-primary">
-							Back to Home
-						</a>
-						<i className="far fa-heart" />
+							return (
+								<Card
+									key={i}
+									var1={item.name}
+									var2={"Gravity: " + item.gravity}
+									var3={"Diameter: " + item.diameter}
+									var4={"Climate: " + item.climate}
+								/>
+							);
+						})}{" "}
 					</div>
 				</div>
 			</div>

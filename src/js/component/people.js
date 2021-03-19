@@ -5,24 +5,31 @@ import { Context } from "../store/appContext";
 import { Card } from "../component/card";
 
 export const People = () => {
-    const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
-    return (
-        <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            {store.people.map((item, i) => {
-                return <Card
-                    key={index}
-                    nombre={item.name}
-                    var1={"Height: " + item.height}
-                    var2={"Eye color: " + item.eye_color}
-                    var3={"Hair color: " + item.hair_color}
-
-                />
-
-        </div>
-
-    );
+	return (
+		<div className="row">
+			<div className="col-sm-6">
+				<div className="card">
+					<div className="card-body">
+						<h5 className="card-title">Card title</h5>
+						<p className="card-text" />{" "}
+						{store.people.map((item, i) => {
+							return (
+								<Card
+									key={i}
+									var1={item.name}
+									var2={"Height: " + item.height}
+									var3={"Eye color: " + item.eye_color}
+									var4={"Hair color: " + item.hair_color}
+								/>
+							);
+						})}{" "}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 // export const People = props => {
