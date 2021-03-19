@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import "/workspace/react-hello-webapp/src/styles/home.scss";
 import { Context } from "../store/appContext";
+import * as mdb from "mdb-ui-kit"; // lib
+import { Input } from "mdb-ui-kit"; // module
 
 export const Home = () => {
 	const { store } = useContext(Context);
-	console.log(store.planets);
-	console.log(store.people);
 
 	return (
 		<div className="container text-center mt-5 bg'dark">
@@ -26,6 +26,15 @@ export const Home = () => {
 							className="d-block"
 							src="https://preview.redd.it/ftamwl8y4m131.jpg?width=640&crop=smart&auto=webp&s=c674a1fde1d1395cf80d896c6ece6450dca606f8"
 							alt="Planets"
+						/>
+					</Link>
+				</div>
+				<div className="col-md-6 d-flex justify-content-center">
+					<Link to="/vehicles">
+						<img
+							className="d-block"
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScmIZNXb-bABpOwmGOSgMLB8Ye-3DZJnp1ZQ&usqp=CAU"
+							alt="Vehicles"
 						/>
 					</Link>
 				</div>

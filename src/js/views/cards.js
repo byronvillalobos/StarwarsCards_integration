@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { People } from "../component/people";
 import { Planets } from "../component/planets";
+import { Vehicles } from "../component/vehicles";
+
 import "../../styles/demo.scss";
 
 export const Cards = () => {
@@ -13,6 +15,7 @@ export const Cards = () => {
 		<div>
 			<People />
 			<Planets />
+			<Vehicles />
 		</div>
 	);
 };
