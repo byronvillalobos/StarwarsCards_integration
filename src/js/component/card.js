@@ -7,27 +7,20 @@ export const Card = props => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="row mt-4">
-			<div className="col-4 mx-2">
-				<div className="card">
-					<img src="" className="card-img-top" alt="..." />
-					<div className="card-body">
-						<h5 className="card-title">{props.var1}</h5>
-						<p className="card-text">
-							{props.var2}
-							<br />
-							{props.var3}
-							<br />
-							{props.var4}
-						</p>
+		<div className="card-body">
+			<h5 className="card-title">{props.var1}</h5>
+			<p className="card-text">
+				{props.var2}
+				<br />
+				{props.var3}
+				<br />
+				{props.var4}
+			</p>
 
-						<a href="#" className="btn btn-primary">
-							Learn more!
-						</a>
-						<i className="far fa-heart" />
-					</div>
-				</div>
-			</div>
+			<a href="#" className="btn btn-primary">
+				Learn more!
+			</a>
+			<i className="far fa-heart" />
 		</div>
 	);
 };
