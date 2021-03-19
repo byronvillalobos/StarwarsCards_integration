@@ -11,8 +11,8 @@ export const People = () => {
 		<div>
 			{store.people.map((item, i) => {
 				return (
-					<div key={i} className="row">
-						<div className="col-sm-6">
+					<div key={i} className="card-group">
+						<div className="card">
 							<div className="card">
 								<Card
 									var1={item.name}
