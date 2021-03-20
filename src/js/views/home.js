@@ -11,7 +11,7 @@ export const Home = () => {
 	return (
 		<div className="container text-center mt-5 bg'dark">
 			<div className="row">
-				<div className="col-md-6 d-flex justify-content-center">
+				<div className="col-md-4 d-flex justify-content-center">
 					<Link to="/people">
 						<img
 							className="d-block"
@@ -20,7 +20,7 @@ export const Home = () => {
 						/>
 					</Link>
 				</div>
-				<div className="col-md-6 d-flex justify-content-center">
+				<div className="col-md-4 d-flex justify-content-center">
 					<Link to="/planets">
 						<img
 							className="d-block"
@@ -29,7 +29,7 @@ export const Home = () => {
 						/>
 					</Link>
 				</div>
-				<div className="col-md-6 d-flex justify-content-center">
+				<div className="col-md-4 d-flex justify-content-center">
 					<Link to="/vehicles">
 						<img
 							className="d-block"

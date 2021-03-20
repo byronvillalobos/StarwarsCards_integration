@@ -9,7 +9,11 @@ export const Card = props => {
 	return (
 		<div className="col">
 			<div className="card">
-				<img src="#" className="card-img-top" alt="..." />
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_20z36P9VgEMUSm5ITbk0jue77Un9Hsr0Q&usqp=CAU"
+					className="card-img-top"
+					alt="..."
+				/>
 				<div className="card-body">
 					<h5 className="card-title">{props.var1}</h5>
 					<p className="card-text">
