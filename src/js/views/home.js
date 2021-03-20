@@ -9,7 +9,7 @@ export const Home = () => {
 	const { store } = useContext(Context);
 
 	return (
-		<div className="container text-center mt-5 bg'dark">
+		<div className="container text-center mt-10 bg'dark">
 			<div className="row">
 				<div className="col-md-4 d-flex justify-content-center">
 					<Link to="/people">
@@ -38,6 +38,7 @@ export const Home = () => {
 						/>
 					</Link>
 				</div>
+				<div className="col-md-1 d-flex justify-content-center" />
 			</div>
 		</div>
 	);

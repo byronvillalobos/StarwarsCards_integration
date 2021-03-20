@@ -2,21 +2,27 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { Card } from "../component/card";
+import { Single } from "../views/single";
 
-export const Single = props => {
+export const Detailed = () => {
+	const { id } = useParams();
+	const intId = parseInt(id);
 	const { store, actions } = useContext(Context);
-	const params = useParams();
+
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">{props.var1}</h1>
-			<p className="card-text">
-				{props.var2}
-				<br />
-				{props.var3}
-				<br />
-				{props.var4}
-			</p>
-			<hr className="my-4" />
+		<div className="row row-cols-1 row-cols-md-2 g-4">
+			{store.vehicles.map((item, i) => {
+				if (intId == i) {
+					console.log("entro al if");
+
+					return (
+						<h1 key={i} className="text-warning">
+							{item.name}
+						</h1>
+					);
+				}
+			})}
 
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="goBack()" role="button">
@@ -26,12 +32,4 @@ export const Single = props => {
 			</Link>
 		</div>
 	);
-};
-
-Single.propTypes = {
-	match: PropTypes.object,
-	var1: PropTypes.string,
-	var2: PropTypes.string,
-	var3: PropTypes.string,
-	var4: PropTypes.string
 };

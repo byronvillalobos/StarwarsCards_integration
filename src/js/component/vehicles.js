@@ -6,6 +6,7 @@ import { Card } from "../component/card";
 
 export const Vehicles = () => {
 	const { store, actions } = useContext(Context);
+	console.log("data", store.vehicles);
 
 	return (
 		<div className="row row-cols-1 row-cols-md-2 g-4">
@@ -17,6 +18,7 @@ export const Vehicles = () => {
 						var2={"Model: " + item.model}
 						var3={"Manufacturer: " + item.manufacturer}
 						var4={"Class: " + item.vehicle_class}
+						pag={i}
 					/>
 				);
 			})}

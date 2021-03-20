@@ -24,9 +24,11 @@ export const Card = props => {
 						{props.var4}
 					</p>
 
-					<a href="#" className="btn btn-primary">
-						Learn more!
-					</a>
+					<Link to={`/detailed/${props.pag}`}>
+						<span className="btn btn-outline-dark" role="button">
+							Learn more
+						</span>
+					</Link>
 					<i className="far fa-heart" />
 				</div>
 			</div>
@@ -40,7 +42,8 @@ Card.propTypes = {
 	var1: PropTypes.string,
 	var2: PropTypes.string,
 	var3: PropTypes.string,
-	var4: PropTypes.string
+	var4: PropTypes.string,
+	pag: PropTypes.number
 };
 
 // export const People = props => {
