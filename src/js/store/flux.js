@@ -1,18 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			people: [],
+			planets: [],
+			vehicles: [],
+			favorites: []
 		},
 		actions: {
 			LoadPeople: async () => {
@@ -34,6 +26,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ vehicles: data.results });
+			},
+			addFavorites: favparam => {
+				setStore({ favorites: favparam });
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

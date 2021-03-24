@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 import { Card } from "../component/card";
 import { Single } from "../views/single";
 
-export const Detailed = () => {
+export const Detailed_planets = () => {
 	const { id } = useParams();
 	const intId = parseInt(id);
 	const { store, actions } = useContext(Context);
@@ -13,12 +13,12 @@ export const Detailed = () => {
 	return (
 		<div>
 			<div className="row row-cols-1 row-cols-md-2 g-4">
-				{store.people.map((item, i) => {
+				{store.planets.map((item, i) => {
 					if (intId == i) {
 						console.log("entro al if");
 
 						return (
-							<div className="card">
+							<div className="col-md-4 d-flex justify-content-center">
 								<div className="card-body">
 									<h1 key={i} className="text-danger">
 										{item.name}
@@ -29,8 +29,8 @@ export const Detailed = () => {
 					}
 				})}
 			</div>
-			<Link to="/people/">
-				<span className="btn btn-primary btn-lg" href="/people/" role="button">
+			<Link to="/planets/">
+				<span className="btn btn-primary btn-lg" href="/planets/" role="button">
 					{/* "javascript:history.back()" */}
 					Back
 				</span>

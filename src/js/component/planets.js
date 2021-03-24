@@ -17,6 +17,8 @@ export const Planets = () => {
 						var2={"Gravity: " + item.gravity}
 						var3={"Diameter: " + item.diameter}
 						var4={"Climate: " + item.climate}
+						pag={i}
+						pagtobelinked="detailed_planets"
 					/>
 				);
 			})}

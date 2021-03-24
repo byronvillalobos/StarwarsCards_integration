@@ -24,7 +24,7 @@ export const Card = props => {
 						{props.var4}
 					</p>
 
-					<Link to={`/detailed/${props.pag}`}>
+					<Link to={`/${props.pagtobelinked}/${props.pag}`}>
 						<span className="btn btn-outline-dark" role="button">
 							Learn more
 						</span>
@@ -43,7 +43,8 @@ Card.propTypes = {
 	var2: PropTypes.string,
 	var3: PropTypes.string,
 	var4: PropTypes.string,
-	pag: PropTypes.number
+	pag: PropTypes.number,
+	pagtobelinked: PropTypes.string
 };
 
 // export const People = props => {

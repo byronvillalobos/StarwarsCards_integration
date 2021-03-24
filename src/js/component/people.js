@@ -17,6 +17,8 @@ export const People = () => {
 						var2={"Height: " + item.height}
 						var3={"Eye color: " + item.eye_color}
 						var4={"Hair color: " + item.hair_color}
+						pag={i}
+						pagtobelinked={"detailed"}
 					/>
 				);
 			})}
