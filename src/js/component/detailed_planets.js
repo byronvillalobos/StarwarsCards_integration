@@ -18,11 +18,19 @@ export const Detailed_planets = () => {
 						console.log("entro al if");
 
 						return (
-							<div className="col-md-4 d-flex justify-content-center">
-								<div className="card-body">
-									<h1 key={i} className="text-danger">
-										{item.name}
-									</h1>
+							<div className="card text-center">
+								<div key={i} className="card-header">
+									<h1>{item.name}</h1>
+
+									<div className="card-body">
+										<h4>
+											<p>Gravity: {item.gravity}</p>
+											<p>Diameter: {item.diameter}</p>
+											<p>Climate: {item.climate}</p>
+											<p>Terrain: {item.terrain}</p>
+											<p>Population: {item.population}</p>
+										</h4>
+									</div>
 								</div>
 							</div>
 						);

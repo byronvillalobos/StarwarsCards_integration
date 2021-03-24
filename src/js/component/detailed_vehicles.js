@@ -20,7 +20,7 @@ export const Detailed_vehicles = () => {
 						return (
 							<div className="card text-center">
 								<div key={i} className="card-header">
-									<h1>Name: {item.name}</h1>
+									<h1>{item.name}</h1>
 
 									<div className="card-body">
 										<h4>

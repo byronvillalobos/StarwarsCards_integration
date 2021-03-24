@@ -18,11 +18,19 @@ export const Detailed = () => {
 						console.log("entro al if");
 
 						return (
-							<div className="card">
-								<div className="card-body">
-									<h1 key={i} className="text-danger">
-										{item.name}
-									</h1>
+							<div className="card text-center">
+								<div key={i} className="card-header">
+									<h1>{item.name}</h1>
+									<div className="card-body">
+										<h4>
+											<p>Height: {item.height}</p>
+											<p>Mass: {item.mass}</p>
+											<p>Hair Color: {item.hair_color}</p>
+											<p>Skin Color: {item.skin_color}</p>
+											<p>Gender: {item.gender}</p>
+											<p>Birth Year: {item.birth_year}</p>
+										</h4>
+									</div>
 								</div>
 							</div>
 						);
