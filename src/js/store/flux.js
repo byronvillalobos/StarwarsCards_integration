@@ -1,57 +1,83 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			people: [],
+			peoples: [],
 			planets: [],
 			vehicles: [],
 			favorites: []
 		},
 		actions: {
-			LoadPeople: async () => {
-				const url = "https://swapi.dev/api/people/";
-				const response = await fetch(url);
-				const data = await response.json();
-				setStore({ people: data.results });
-			},
+			loadPeoples: async () => {
+				// Se obtiene la variable del localStorage
+				let localStoragePeoples = localStorage.getItem("peoplesAPI");
 
-			LoadPlanets: async () => {
-				const url = "https://swapi.dev/api/planets/";
-				const response = await fetch(url);
-				const data = await response.json();
-				setStore({ planets: data.results });
-			},
+				if (localStoragePeoples === null || localStoragePeoples === undefined) {
+					// Si localStorage NO existe, entonces se cargan los datos de la API.
+					const url = "https://swapi.dev/api/people/";
+					const response = await fetch(url);
+					const data = await response.json();
+					setStore({ peoples: data.results });
 
-			LoadVehicles: async () => {
-				const url = "https://swapi.dev/api/vehicles/";
-				const response = await fetch(url);
-				const data = await response.json();
-				setStore({ vehicles: data.results });
+					localStorage.setItem("peoplesAPI", JSON.stringify(data.results));
+				} else {
+					// Si localStorage SI existe, entonces se cargan los datos de la variable local, para no volver a realizar Request.
+					setStore({ peoples: JSON.parse(localStoragePeoples) });
+				}
 			},
-			addFavorites: favparam => {
-				setStore({ favorites: favparam });
+			loadPlanets: async () => {
+				// Se obtiene la variable del localStorage
+				let localStoragePlanets = localStorage.getItem("planetsAPI");
+
+				if (localStoragePlanets === null || localStoragePlanets === undefined) {
+					// Si localStorage NO existe, entonces se cargan los datos de la API.
+					const url = "https://swapi.dev/api/planets/";
+					const response = await fetch(url);
+					const data = await response.json();
+					setStore({ planets: data.results });
+
+					localStorage.setItem("planetsAPI", JSON.stringify(data.results));
+				} else {
+					// Si localStorage SI existe, entonces se cargan los datos de la variable local, para no volver a realizar Request.
+					setStore({ planets: JSON.parse(localStoragePlanets) });
+				}
 			},
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			loadVehicles: async () => {
+				// Se obtiene la variable del localStorage
+				let localStorageVehicles = localStorage.getItem("vehiclesAPI");
+
+				if (localStorageVehicles === null || localStorageVehicles === undefined) {
+					// Si localStorage NO existe, entonces se cargan los datos de la API.
+					const url = "https://swapi.dev/api/vehicles/";
+					const response = await fetch(url);
+					const data = await response.json();
+					setStore({ vehicles: data.results });
+
+					localStorage.setItem("vehiclesAPI", JSON.stringify(data.results));
+				} else {
+					// Si localStorage SI existe, entonces se cargan los datos de la variable local, para no volver a realizar Request.
+					setStore({ vehicles: JSON.parse(localStorageVehicles) });
+				}
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
+			addFavorite: favoriteParam => {
+				// Esta función permite agregar elementos a la lista de favoritos
 				const store = getStore();
+				let newFavorite = store.favorites;
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+				favoriteParam = favoriteParam[0];
 
-				//reset the global store
-				setStore({ demo: demo });
+				// Esta variable permite validar si el elemento ya fue agregado como favorito.
+				let existsFavorite = newFavorite.filter(item => item.name == favoriteParam.name);
+
+				if (existsFavorite.length === 0) {
+					// Si no existe como favorito, se agrega
+					newFavorite.push(favoriteParam);
+
+					setStore({ favorites: newFavorite });
+				}
+			},
+			deleteFavorite: favoriteParam => {
+				// Esta función permite eliminar elementos de la lista de favoritos
+				setStore({ favorites: favoriteParam });
 			}
 		}
 	};
