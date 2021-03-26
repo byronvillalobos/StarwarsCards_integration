@@ -22,8 +22,8 @@ export default function PlanetCard(props) {
 						{props.terrain}
 					</p>
 					<p className="card-text text-left m-0">
-						Climate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						{props.climate}
+						gravity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						{props.gravity}
 					</p>
 					<p className="card-text text-left m-0">Population:&nbsp;&nbsp; {props.population}</p>
 				</div>
@@ -56,7 +56,7 @@ PlanetCard.propTypes = {
 	alt: PropType.string,
 	name: PropType.string,
 	terrain: PropType.string,
-	climate: PropType.string,
+	gravity: PropType.string,
 	population: PropType.string,
 	buttonUrl: PropType.string,
 	buttonLabel: PropType.string,

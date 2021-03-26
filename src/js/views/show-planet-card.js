@@ -51,7 +51,7 @@ export default function ShowPlanetCard() {
 										population={item.population}
 										buttonUrl="/planet-card-detail/"
 										buttonLabel="Learn More!"
-										imageUrl="#"
+										imageUrl="https://preview.redd.it/ftamwl8y4m131.jpg?width=640&crop=smart&auto=webp&s=c674a1fde1d1395cf80d896c6ece6450dca606f8"
 									/>
 								</div>
 							);

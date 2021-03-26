@@ -31,6 +31,10 @@ export default function PlanetCardDetail() {
 													<div className="card-body card-body-detail pl-5">
 														<h2 className="card-title text-center">{item.name}</h2>
 														<p className="card-text text-left m-0">
+															Population:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															{item.population}
+														</p>
+														<p className="card-text text-left m-0">
 															Terrain:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 															{item.terrain.charAt(0).toUpperCase() +
 																item.terrain.slice(1)}
@@ -41,16 +45,12 @@ export default function PlanetCardDetail() {
 																item.climate.slice(1)}
 														</p>
 														<p className="card-text text-left m-0">
-															Population:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-															{item.population}
-														</p>
-														<p className="card-text text-left m-0">
 															Rotation Period:&nbsp;&nbsp;
 															{item.rotation_period}
 														</p>
 														<p className="card-text text-left m-0">
-															Diameter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-															{item.diameter}
+															orbital_period:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															{item.orbital_period}
 														</p>
 														<p className="card-text text-left m-0">
 															Gravity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -61,7 +61,7 @@ export default function PlanetCardDetail() {
 																<button
 																	type="button"
 																	className="btn btn-light btn-block">
-																	Regresar
+																	Back
 																</button>
 															</Link>
 														</div>

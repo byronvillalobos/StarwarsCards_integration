@@ -22,12 +22,12 @@ export default function PeopleCard(props) {
 						{props.gender}
 					</p>
 					<p className="card-text text-left m-0">
-						Hair Color:&nbsp;&nbsp;
-						{props.hairColor}
+						Height:&nbsp;&nbsp;
+						{props.height}
 					</p>
 					<p className="card-text text-left m-0">
-						Eye Color:&nbsp;&nbsp;&nbsp;
-						{props.eyeColor}
+						Mass:&nbsp;&nbsp;&nbsp;
+						{props.mass}
 					</p>
 				</div>
 				<div className="card-footer">
@@ -58,8 +58,8 @@ PeopleCard.propTypes = {
 	alt: PropType.string,
 	title: PropType.string,
 	gender: PropType.string,
-	hairColor: PropType.string,
-	eyeColor: PropType.string,
+	mass: PropType.string,
+	height: PropType.string,
 	buttonUrl: PropType.string,
 	buttonLabel: PropType.string,
 	imageUrl: PropType.string

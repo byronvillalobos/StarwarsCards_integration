@@ -40,8 +40,13 @@ export default function VehicleCardDetail() {
 																item.vehicle_class.slice(1)}
 														</p>
 														<p className="card-text text-left m-0">
-															Passengers:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															Crew number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 															{item.passengers}
+														</p>
+
+														<p className="card-text text-left m-0">
+															Capacity:&nbsp;&nbsp;
+															{item.cargo_capacity}
 														</p>
 														<p className="card-text text-left m-0">
 															Manufacturer:&nbsp;&nbsp;&nbsp;&nbsp;
@@ -52,16 +57,12 @@ export default function VehicleCardDetail() {
 															Length:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 															{item.length}
 														</p>
-														<p className="card-text text-left m-0">
-															Cargo Capacity:&nbsp;&nbsp;
-															{item.cargo_capacity}
-														</p>
 														<div className="card-button-back d-block">
 															<Link to="/show-vehicle-card">
 																<button
 																	type="button"
 																	className="btn btn-light btn-block">
-																	Regresar
+																	Back
 																</button>
 															</Link>
 														</div>

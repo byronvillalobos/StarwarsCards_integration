@@ -53,7 +53,7 @@ export default function ShowVehicleCard() {
 										passengers={item.passengers}
 										buttonUrl="/vehicle-card-detail/"
 										buttonLabel="Learn More!"
-										imageUrl="#"
+										imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScmIZNXb-bABpOwmGOSgMLB8Ye-3DZJnp1ZQ&usqp=CAU"
 									/>
 								</div>
 							);

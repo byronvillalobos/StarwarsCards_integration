@@ -35,6 +35,15 @@ export default function PeopleCardDetail() {
 															{item.gender.charAt(0).toUpperCase() + item.gender.slice(1)}
 														</p>
 														<p className="card-text text-left m-0">
+															birth_year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															{item.birth_year}
+														</p>
+														<p className="card-text text-left m-0">
+															Skin Color:&nbsp;&nbsp;&nbsp;&nbsp;
+															{item.skin_color.charAt(0).toUpperCase() +
+																item.skin_color.slice(1)}
+														</p>
+														<p className="card-text text-left m-0">
 															Hair Color:&nbsp;&nbsp;&nbsp;
 															{item.hair_color.charAt(0).toUpperCase() +
 																item.hair_color.slice(1)}
@@ -48,21 +57,12 @@ export default function PeopleCardDetail() {
 															Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 															{item.height}
 														</p>
-														<p className="card-text text-left m-0">
-															Mass:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-															{item.mass}
-														</p>
-														<p className="card-text text-left m-0">
-															Skin Color:&nbsp;&nbsp;&nbsp;&nbsp;
-															{item.skin_color.charAt(0).toUpperCase() +
-																item.skin_color.slice(1)}
-														</p>
 														<div className="card-button-back d-block">
 															<Link to="/show-people-card">
 																<button
 																	type="button"
 																	className="btn btn-light btn-block">
-																	Regresar
+																	Back
 																</button>
 															</Link>
 														</div>

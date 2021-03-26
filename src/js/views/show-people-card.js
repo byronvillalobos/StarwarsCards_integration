@@ -50,8 +50,8 @@ export default function ShowPeopleCard() {
 										hairColor={item.hair_color.charAt(0).toUpperCase() + item.hair_color.slice(1)}
 										eyeColor={item.eye_color.charAt(0).toUpperCase() + item.eye_color.slice(1)}
 										buttonUrl="/people-card-detail/"
-										buttonLabel="Learn More!"
-										imageUrl="#"
+										buttonLabel="More Details!"
+										imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-characters-ranked-1577122930.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*"
 									/>
 								</div>
 							);

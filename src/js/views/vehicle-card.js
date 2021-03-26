@@ -25,7 +25,7 @@ export default function VehicleCard(props) {
 						Vehicle Class:&nbsp;&nbsp;
 						{props.vehicle_class}
 					</p>
-					<p className="card-text text-left m-0">Passengers:&nbsp;&nbsp;&nbsp;&nbsp; {props.passengers}</p>
+					<p className="card-text text-left m-0">Crew Members:&nbsp;&nbsp;&nbsp;&nbsp; {props.passengers}</p>
 				</div>
 				<div className="card-footer">
 					<small className="text-muted">
